@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edtValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickStart"
+        android:text="Start" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <com.timerdemo.morphing.MorphingView
+            android:id="@+id/timerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <com.timerdemo.morphing.MorphingView
+            android:id="@+id/morphingMillSec"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
+        android:background="@drawable/border_white_rectangle"
+        android:padding="5dp"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            >
+
+        <com.timerdemo.wheelpicker.WheelView
+            android:id="@+id/hour"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:text=":" />
+
+        <com.timerdemo.wheelpicker.WheelView
+            android:id="@+id/mins"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:text=":" />
+
+        <com.timerdemo.wheelpicker.WheelView
+            android:id="@+id/sec"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/gray"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:background="@drawable/border_gray_rectangle"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/v2"
+            android:layout_below="@+id/v1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            >
+        </View>
+
+      <View
+          android:id="@+id/v2"
+            android:layout_width="match_parent"
+             android:background="@color/gray"
+            android:layout_alignParentBottom="true"
+            android:layout_height="20dp">
+        </View>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UI"
+        android:onClick="onClickAnother"
+        />
+
+
+</LinearLayout>
